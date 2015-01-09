@@ -8,7 +8,11 @@ before_install:
 install:
 
 # run tests
-script: nosetests
+script: nosetests --with-coverage
 
 after_success:
-  codecov --token=settings.CCTOKEN
+  codecov --token=08889027-2a23-4998-ae8c-947be7612fa6
+
+branches:
+  only:
+    - master
