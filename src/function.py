@@ -7,9 +7,9 @@ def split_some_parts(item):
     if len(parts) >= 1:
         i += 1
     if len(parts) >= 2:
-        i += 2
+        i += 1
     if len(parts) >= 3:
-        i += 3
+        i += 1
 
     result = i
 
