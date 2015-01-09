@@ -1,4 +1,5 @@
 language: python
+
 python:
   - "2.7"
 
@@ -8,10 +9,10 @@ before_install:
 install:
 
 # run tests
-script: nosetests --with-coverage
+script: nosetests
 
 after_success:
-  codecov --token=08889027-2a23-4998-ae8c-947be7612fa6
+  codecov
 
 branches:
   only:
