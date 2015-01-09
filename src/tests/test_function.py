@@ -16,6 +16,12 @@ class BogusFunctionTestCase(unittest.TestCase):
         pass
 
     @patch('src.function.logging')
+    def test_split_function_none(self, mock_logging):
+        result = function.split_some_parts('')
+        self.assertEqual(result, 0)
+        self.assertTrue(mock_logging.error.called)
+
+    @patch('src.function.logging')
     def test_split_function_one(self, mock_logging):
         result = function.split_some_parts('test')
         self.assertEqual(result, 1)
@@ -27,14 +33,14 @@ class BogusFunctionTestCase(unittest.TestCase):
         self.assertEqual(result, 2)
         self.assertTrue(mock_logging.info.called)
 
-    # @patch('src.function.logging')
-    # def test_split_function_three(self, mock_logging):
-    #     result = function.split_some_parts('test.some.more')
-    #     self.assertEqual(result, 3)
-    #     self.assertTrue(mock_logging.info.called)
-    #
-    # @patch('src.function.logging')
-    # def test_split_function_moar(self, mock_logging):
-    #     result = function.split_some_parts('test.some.more.content')
-    #     self.assertEqual(result, 1)
-    #     self.assertTrue(mock_logging.warn.called)
+    @patch('src.function.logging')
+    def test_split_function_three(self, mock_logging):
+        result = function.split_some_parts('test.some.more')
+        self.assertEqual(result, 3)
+        self.assertTrue(mock_logging.info.called)
+
+    @patch('src.function.logging')
+    def test_split_function_moar(self, mock_logging):
+        result = function.split_some_parts('test.some.more.content')
+        self.assertEqual(result, 4)
+        self.assertTrue(mock_logging.warn.called)
