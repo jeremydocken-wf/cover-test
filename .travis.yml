@@ -9,7 +9,7 @@ before_install:
 install:
 
 # run tests
-script: nosetests
+script: nosetests --with-coverage
 
 after_success:
   codecov --min-coverage=75
