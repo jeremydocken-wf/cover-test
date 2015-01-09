@@ -20,6 +20,6 @@ def split_some_parts(item):
     elif result == 3:
         logging.info('you have three parts')
     else:
-        logging.info('you have more than three parts')
+        logging.warn('you have more than three parts')
 
     return result
