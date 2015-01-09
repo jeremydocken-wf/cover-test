@@ -36,5 +36,5 @@ class BogusFunctionTestCase(unittest.TestCase):
     @patch('src.function.logging')
     def test_split_function_moar(self, mock_logging):
         result = function.split_some_parts('test.some.more.content')
-        self.assertEqual(result, 1)
+        self.assertEqual(result, 4)
         self.assertTrue(mock_logging.warn.called)

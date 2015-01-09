@@ -10,6 +10,8 @@ def split_some_parts(item):
         i += 1
     if len(parts) >= 3:
         i += 1
+    if len(parts) >= 4:
+        i = len(parts)
 
     result = i
 
