@@ -12,7 +12,7 @@ install:
 script: nosetests
 
 after_success:
-  codecov
+  codecov --min-coverage=75
 
 branches:
   only:
