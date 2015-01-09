@@ -27,11 +27,11 @@ class BogusFunctionTestCase(unittest.TestCase):
         self.assertEqual(result, 2)
         self.assertTrue(mock_logging.info.called)
 
-    @patch('src.function.logging')
-    def test_split_function_three(self, mock_logging):
-        result = function.split_some_parts('test.some.more')
-        self.assertEqual(result, 3)
-        self.assertTrue(mock_logging.info.called)
+    # @patch('src.function.logging')
+    # def test_split_function_three(self, mock_logging):
+    #     result = function.split_some_parts('test.some.more')
+    #     self.assertEqual(result, 3)
+    #     self.assertTrue(mock_logging.info.called)
 
     # @patch('src.function.logging')
     # def test_split_function_moar(self, mock_logging):
