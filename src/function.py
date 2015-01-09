@@ -5,8 +5,7 @@ def split_some_parts(item):
     i = 0
     if len(item):
         parts = item.split('.')
-        if len(parts) >= 1:
-            i += 1
+        i += 1
         if len(parts) >= 2:
             i += 1
         if len(parts) >= 3:
