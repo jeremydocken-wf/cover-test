@@ -1,0 +1,14 @@
+language: python
+python:
+  - "2.7"
+
+before_install:
+  pip install codecov
+
+install:
+
+# run tests
+script: nosetests
+
+after_success:
+  codecov --token=settings.CCTOKEN
