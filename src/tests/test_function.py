@@ -16,6 +16,12 @@ class BogusFunctionTestCase(unittest.TestCase):
         pass
 
     @patch('src.function.logging')
+    def test_split_function_none(self, mock_logging):
+        result = function.split_some_parts('')
+        self.assertEqual(result, 0)
+        self.assertTrue(mock_logging.error.called)
+
+    @patch('src.function.logging')
     def test_split_function_one(self, mock_logging):
         result = function.split_some_parts('test')
         self.assertEqual(result, 1)

@@ -3,18 +3,21 @@ import logging
 
 def split_some_parts(item):
     i = 0
-    parts = item.split('.')
-    if len(parts) >= 1:
-        i += 1
-    if len(parts) >= 2:
-        i += 1
-    if len(parts) >= 3:
-        i += 1
-    if len(parts) >= 4:
-        i = len(parts)
+    if len(item):
+        parts = item.split('.')
+        if len(parts) >= 1:
+            i += 1
+        if len(parts) >= 2:
+            i += 1
+        if len(parts) >= 3:
+            i += 1
+        if len(parts) >= 4:
+            i = len(parts)
 
     result = i
 
+    if result == 0:
+        logging.error('you must have parts')
     if result == 1:
         logging.info('you have one part')
     elif result == 2:
