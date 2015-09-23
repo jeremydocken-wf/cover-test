@@ -1,7 +1,7 @@
 project: python
 
 requirements:
--requirements_dev.txt
+- requirements_dev.txt
 
 env:
 - CODECOV_TOKEN='bQ4MgjJ0G2Y73v8JNX6L7yMK9679nbYB'
