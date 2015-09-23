@@ -1,13 +1,11 @@
 project: python
 
-before_install:
--  pip install codecov
+requirements:
+-requirements_dev.txt
 
 env:
 - CODECOV_TOKEN='bQ4MgjJ0G2Y73v8JNX6L7yMK9679nbYB'
 # run tests
-
-install:
 
 script: 
 - nosetests --with-coverage
