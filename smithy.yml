@@ -1,7 +1,7 @@
 project: python
 
 before_install:
-  pip install codecov
+-  pip install codecov
 
 env:
 - CODECOV_TOKEN='bQ4MgjJ0G2Y73v8JNX6L7yMK9679nbYB'
@@ -10,7 +10,7 @@ env:
 install:
 
 script: 
-nosetests --with-coverage
+- nosetests --with-coverage
 
 after_success:
 - codecov -u https://codecov.workiva.net -t $CODECOV_TOKEN -r jeremydocken-wf/cover-test
