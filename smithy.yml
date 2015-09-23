@@ -1,0 +1,14 @@
+project: python
+
+requirements:
+- requirements_dev.txt
+
+env:
+- CODECOV_TOKEN='bQ4MgjJ0G2Y73v8JNX6L7yMK9679nbYB'
+# run tests
+
+script: 
+- nosetests --with-coverage --cover-xml
+
+after_script:
+- codecov -u https://codecov.workiva.net -t $CODECOV_TOKEN -r jeremydocken-wf/cover-test
