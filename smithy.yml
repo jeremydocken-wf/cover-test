@@ -10,5 +10,5 @@ env:
 script: 
 - nosetests --with-coverage
 
-after_success:
+after_script:
 - codecov -u https://codecov.workiva.net -t $CODECOV_TOKEN -r jeremydocken-wf/cover-test
